@@ -1,0 +1,14 @@
+/* .card{
+    margin-bottom: 20px; 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(800px, 1fr));
+    gap : 1rem
+  } */
+/* body{
+  background-color: rgb(65, 170, 240);
+} */
+ img{
+   height: 300px;
+   width: 300px;
+
+ }

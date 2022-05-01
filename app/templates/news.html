@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+   
+{% block content%}
+    <h1>All Articles</h1>
+    {% for article in articles %}
+    <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 movie-card">
+      <img src="{{ article.urlToImage }}" alt="{{ article.title }} " class="img-responsive">
+      <li class="text-center">
+          <a href="/home}}">
+              {{ article.title|truncate(10)}}</a>
+      </li>
+  </div>
+    
+    {% endfor %} 
+    
+{% endblock %}

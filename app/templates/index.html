@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+   
+{% block content%}
+    <h1>All News</h1>
+    {% for source in sources %}
+    <ul>Source:{{source.name}}<br>
+        Description:{{source.description}}<br>
+        Language:{{source.language}}<br>
+        Country:{{source.country}}<br>
+        <a href="{{source.image}}" target="_blank">{{source.image}} </a><br>
+    </ul>
+    {% endfor %} 
+    
+{% endblock %}
+
+   
