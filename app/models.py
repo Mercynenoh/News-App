@@ -10,7 +10,7 @@ class News:
         self.country= country
 
 class Articles:
-    def __init__(self, id,name,author,title,urlToImage,publishedAt,content):  
+    def __init__(self, id,name,author,url,title,urlToImage,publishedAt,content):  
         self.id = id 
         self.name = name
         self.author = author
@@ -18,3 +18,4 @@ class Articles:
         self.urlToImage =urlToImage
         self.publishedAt = publishedAt
         self.content = content
+        self.url = url

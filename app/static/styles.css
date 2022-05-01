@@ -1,14 +1,29 @@
-/* .card{
-    margin-bottom: 20px; 
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(800px, 1fr));
-    gap : 1rem
-  } */
-/* body{
-  background-color: rgb(65, 170, 240);
-} */
- img{
-   height: 300px;
-   width: 300px;
+card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  width: 800px;
+  height: auto;
+  margin:auto;
+  font-weight: 600;
+  align-content: center;
+}
 
- }
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* img{
+  width: 300px;
+  height: 300px;
+} */
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap : 1rem
+} 
+

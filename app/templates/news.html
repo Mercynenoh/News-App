@@ -2,15 +2,39 @@
    
 {% block content%}
     <h1>All Articles</h1>
-    {% for article in articles %}
-    <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 movie-card">
-      <img src="{{ article.urlToImage }}" alt="{{ article.title }} " class="img-responsive">
-      <li class="text-center">
+    
+         <div class="container" >
+           
+         <div class="row">
+          {% for article in articles %}
+            <div class="column">
+                <div class="card">
+                  
+
+                  <img src="{{ article.urlToImage }}" alt="{{ article.title }} ">
+
+                </div>
+                <p> 
+                  <a href="{{ article.title}}" target="_blank">{{ article.url}}</a>
+    
+                 <a href=""></a>
+                </p>
+            </div>
+            {% endfor %}
+        </div>
+      </div>
+
+{% endblock %}
+
+    <!-- <div class="news-card">
+
+      <img src="{{ article.urlToImage }}" alt="{{ article.title }} ">
+      <!-- <li class="text-center">
           <a href="/home}}">
               {{ article.title|truncate(10)}}</a>
-      </li>
-  </div>
+      </li> -->
+  <!-- </div> --> 
+  
     
-    {% endfor %} 
+   
     
-{% endblock %}

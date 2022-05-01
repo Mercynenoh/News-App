@@ -61,6 +61,7 @@ def article_results(article_list):
         id = article_item.get('id')
         name = article_item.get('name')
         author = article_item.get('author')
+        url = article_item.get('url')
         title = article_item.get('title')
         urlToImage = article_item.get('urlToImage')
         publishedAt= article_item.get('publishedAt')
@@ -69,7 +70,7 @@ def article_results(article_list):
         
         
         if urlToImage:
-           articles_object =Articles(id,name,author,title,urlToImage, publishedAt,content)
+           articles_object =Articles(id,name,author,title, url, urlToImage, publishedAt,content)
            articles_results.append(articles_object)   
 
     return articles_results
