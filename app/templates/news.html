@@ -2,25 +2,22 @@
    
 {% block content%}
     
-         <div class="container-fluid" >
+         <div class="container" >
+           
          <div class="row">
           {% for article in articles %}
             <div class="column">
-              <div class="card article mt-4 ml-5" style="width: 20rem;">
+              <div class="card article mt-4 ml-4" style="width: 20rem;">
                 <img src="{{ article.urlToImage }}" alt="{{ article.title }} ">
-                <div class="mask" style="background-color: rgba(178, 60, 253, 0.6);">
-                  <div class="card-img-overlay">
-                    <p class="card-text color">
-                      {{article.url}}
-                    </p>
-                  </div>
-                </div>
                 <div class="card-body">
-                  <a href="{{ article.title}}" target= "_blank" class="btn btn-secondary">Read More</a>
+                  <h5 class="card-title">{{article.url}}</h5>
                 </div>
                 <ul class="list-group list-group-light list-group-small">
                   <li class="list-group-item px-4">By:{{article.author}}</li>
                 </ul>
+                <div class="card-body">
+                  <a href="{{ article.title}}" target= "_blank" class="btn btn-secondary">Read More</a>
+                </div>
                 <div class="card-footer">
                   <small class="text-muted">Published at:{{article.publishedAt}}</small>
                 </div>
@@ -28,6 +25,7 @@
                </div>
             {% endfor %}
         </div>
+       
       </div>
 
 {% endblock %}
