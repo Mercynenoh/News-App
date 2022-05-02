@@ -1,16 +1,25 @@
 {% extends 'base.html' %}
    
 {% block content%}
-    <h1>All News</h1>
-    {% for source in sources %}
-    <ul>Source:{{source.name}}<br>
-        Description:{{source.description}}<br>
-        Language:{{source.language}}<br>
-        Country:{{source.country}}<br>
-        <a href="{{source.image}}" target="_blank">{{source.image}} </a><br>
-    </ul>
-    {% endfor %} 
-    
+<div class="container-fluid">
+    <div class="row">
+        {% for source in sources %}
+        <div class="column">
+            <div class="card source" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">{{source.name}}</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">{{source.description}}</h6>
+                  <a href="{{source.image}}" class="card-link" target="_blank">Click to view</a>
+                </div>
+              </div> 
+        </div>
+        {% endfor %} 
+    </div>
+</div>
 {% endblock %}
+    
+   
+    
+
 
    

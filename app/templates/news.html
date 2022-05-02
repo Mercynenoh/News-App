@@ -1,25 +1,28 @@
 {% extends 'base.html' %}
    
 {% block content%}
-    <h1>All Articles</h1>
     
          <div class="container" >
            
          <div class="row">
           {% for article in articles %}
             <div class="column">
-                <div class="card">
-                  
-
-                  <img src="{{ article.urlToImage }}" alt="{{ article.title }} ">
-
+              <div class="card article mt-4 ml-4" style="width: 20rem;">
+                <img src="{{ article.urlToImage }}" alt="{{ article.title }} ">
+                <div class="card-body">
+                  <h5 class="card-title">{{article.url}}</h5>
                 </div>
-                <p> 
-                  <a href="{{ article.title}}" target="_blank">{{ article.url}}</a>
-    
-                 <a href=""></a>
-                </p>
-            </div>
+                <div class="card-body">
+                  <a href="{{ article.title}}" target= "_blank" class="btn btn-secondary">Read More</a>
+                </div>
+                <ul class="list-group list-group-light list-group-small">
+                  <li class="list-group-item px-4">By:{{article.author}}</li>
+                </ul>
+                <div class="card-footer">
+                  <small class="text-muted">Published at:{{article.publishedAt}}</small>
+                </div>
+              </div>
+               </div>
             {% endfor %}
         </div>
       </div>
