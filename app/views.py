@@ -13,9 +13,9 @@ def home():
     articles = get_articles('popular')
     return render_template('news.html',articles= articles)
 
-# @app.route('/search/<source-name>')
-# def search (movie_name):
-#     se
+@app.route('/search/<source-name>')
+def search (movie_name):
+    se
 
 
 

@@ -39,7 +39,7 @@ body{
   /* background-color: blue; */
   align-content: center;
   background: linear-gradient(rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)), url(../static/back2.jpeg);
+            rgba(0, 0, 0, 0.5)), url(../static/mic.jpeg);
 }
 
 .row:after {
