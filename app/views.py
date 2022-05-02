@@ -1,6 +1,6 @@
 from flask import render_template, request
 from app import app
-from .request import get_sources, get_articles, search_source
+from .request import get_sources, get_articles
 
 @app.route('/')
 def index():
@@ -13,11 +13,5 @@ def home():
     articles = get_articles('popular')
     return render_template('news.html',articles= articles)
 
-@app.route('/search/<source-name>')
-def search (movie_name):
-    se
 
-
-
-    
  

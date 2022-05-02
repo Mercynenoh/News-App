@@ -75,17 +75,3 @@ def article_results(article_list):
 
     return articles_results
 
-def search_source(source_name):
-    search_sources_url = 'https://api.themoviedb.org/3/search/sources?api_key={}&query={}'.format(api_key,source_name)
-    with urllib.request.urlopen(search_sources_url) as url:
-        search_sources_data = url.read()
-        search_sources_response = json.loads(search_sources_data)
-
-        search_sources_results = None
-
-        if search_sources_response['results']:
-            search_sources_list = search_sources_response['results']
-            search_sources_results = process_results(search_sources_list)
-
-
-    return search_sources_results
