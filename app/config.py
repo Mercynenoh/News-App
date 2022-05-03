@@ -16,7 +16,8 @@ class ProdConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    NEWS_API_KEY = os.environ.get('NEWS_API_KEY')
+   
+    
 
 
 class DevConfig(Config):
@@ -27,4 +28,9 @@ class DevConfig(Config):
         Config: The parent configuration class with General configuration settings
     '''
 
-    DEBUG = True
+DEBUG = True
+
+config_options = {
+'development':DevConfig,
+'production':ProdConfig
+}

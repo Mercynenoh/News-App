@@ -3,6 +3,7 @@ import urllib.request,json
 from .models import News
 from .models import Articles
 
+
 api_key = app.config['NEWS_API_KEY']
 article_url = app.config['ARTICLES_API_BASE_URL']
 base_url = app.config['NEWS_API_BASE_URL']
