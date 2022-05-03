@@ -1,7 +1,7 @@
 from app import app
 import urllib.request,json
-from .models import News
-from .models import Articles
+from models import News
+from models import Articles
 
 
 api_key = app.config['NEWS_API_KEY']
