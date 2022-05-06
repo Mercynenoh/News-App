@@ -67,11 +67,13 @@ def article_results(article_list):
         urlToImage = article_item.get('urlToImage')
         publishedAt= article_item.get('publishedAt')
         content= article_item.get ('content')
+        football= article_item.get('football')
+
         
         
         
         if urlToImage:
-           articles_object =Articles(id,name,author,title, url, urlToImage, publishedAt,content)
+           articles_object =Articles(id,name,author,title, url, urlToImage, publishedAt,content, football)
            articles_results.append(articles_object)   
 
     return articles_results

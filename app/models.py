@@ -8,9 +8,10 @@ class News:
         self.category= category
         self.language = language
         self.country= country
+        
 
 class Articles:
-    def __init__(self, id,name,author,url,title,urlToImage,publishedAt,content):  
+    def __init__(self, id,name,author,url,title,urlToImage,publishedAt,content,football):  
         self.id = id 
         self.name = name
         self.author = author
@@ -19,3 +20,4 @@ class Articles:
         self.publishedAt = publishedAt
         self.content = content
         self.url = url
+        self.football= football
